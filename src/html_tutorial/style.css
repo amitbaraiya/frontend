@@ -34,6 +34,11 @@ td {
   border-style: solid;
   width: 470px;
   margin: 3px;
+  height: 350px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 
 .btn {
@@ -102,4 +107,8 @@ h3 {
 
 div {
   border-radius: 10px;
+}
+
+.pd {
+  padding: 20px;
 }
