@@ -1,0 +1,108 @@
+body {
+  padding: 0px;
+  margin: 0px;
+}
+.table {
+  color: #ff1b6b;
+  border-color: #45caff;
+  border-style: solid;
+  width: 450px;
+  padding: 10px;
+  margin: 3px;
+}
+
+h2 {
+  text-align: center;
+}
+table,
+th,
+td {
+  border: 1px solid;
+  border-collapse: collapse;
+}
+
+th,
+td {
+  padding: 5px;
+  text-align: center;
+}
+.list {
+  color: #ff1b6b;
+  border-color: #45caff;
+  border-style: solid;
+  width: 470px;
+  margin: 3px;
+}
+
+.JavaScript {
+  color: #ff1b6b;
+  border-color: #45caff;
+  border-style: solid;
+  width: 470px;
+  margin: 3px;
+}
+
+.btn {
+  text-decoration: none;
+}
+
+.container {
+  margin: 3px;
+  width: 470px;
+  display: flex;
+}
+
+.item1 {
+  background-color: red;
+  color: black;
+  width: 40px;
+  text-align: center;
+  margin: 3px;
+  border-radius: 3px;
+  padding: 4px;
+}
+
+.item2 {
+  background-color: green;
+  color: black;
+  width: 40px;
+  text-align: center;
+  margin: 3px;
+  border-radius: 3px;
+  padding: 4px;
+}
+
+.item3 {
+  background-color: #b0e0e6;
+  color: black;
+  width: 40px;
+  text-align: center;
+  margin: 3px;
+  border-radius: 3px;
+  padding: 4px;
+}
+
+.item4 {
+  background-color: #ff8c00;
+  color: black;
+  width: 40px;
+  text-align: center;
+  margin: 3px;
+  border-radius: 3px;
+  padding: 4px;
+}
+
+.layout {
+  color: #ff1b6b;
+  border-color: #45caff;
+  border-style: solid;
+  height: 150px;
+  width: 470px;
+  margin: 3px;
+}
+h3 {
+  margin: 3px;
+}
+.fla {
+  display: flex;
+}
