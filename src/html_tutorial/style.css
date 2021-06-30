@@ -28,11 +28,11 @@ td {
   border-style: solid;
   width: 470px;
   margin: 3px;
+  height: 477px;
 }
 
 .JavaScript {
   border-style: solid;
-  width: 470px;
   margin: 3px;
   height: 350px;
   display: flex;
@@ -93,9 +93,9 @@ td {
 
 .layout {
   border-style: solid;
-  height: 150px;
-  width: 470px;
   margin: 3px;
+  display: flex;
+  flex-direction: column;
 }
 h3 {
   margin: 3px;
@@ -109,6 +109,17 @@ div {
   border-radius: 10px;
 }
 
-.pd {
-  padding: 20px;
+.li {
+  padding: 3px;
+}
+
+.seonde_container {
+  display: flex;
+}
+
+.c2 {
+  margin: 10px;
+  padding: 10px;
+  background: aqua;
+  flex: 1 1px;
 }
