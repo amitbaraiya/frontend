@@ -123,3 +123,17 @@ div {
   background: aqua;
   flex: 1 1px;
 }
+
+.gird-container {
+  margin: 3px;
+  display: grid;
+  grid-template-columns: 350px 350px 350px;
+  column-gap: 40px;
+  justify-content: center;
+}
+
+
+.main-girdcon {
+  border-style: solid;
+  margin: 3px;
+}
