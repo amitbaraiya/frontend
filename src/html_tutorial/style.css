@@ -127,8 +127,9 @@ div {
 .gird-container {
   margin: 3px;
   display: grid;
-  grid-template-columns: 350px 350px 350px;
-  column-gap: 40px;
+  grid-template-columns: 370px 370px 370px;
+  column-gap: 30px;
+  row-gap: 30px;
   justify-content: center;
 }
 
