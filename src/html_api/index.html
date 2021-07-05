@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Geolocation API</title>
+  </head>
+  <body>
+    <h1>Hello, Let's trace your location</h1>
+    <button onClick="getLocation()">Get Location</button>
+    <div id="output">
+      <script>
+        var x = document.getElementById("output");
+
+        function getLocation() {
+          if (navigator.geolocation) {
+            navigator.geolocation.getCurrentPosition(showPosition);
+          } else {
+            x.innerHTML = "Not supproting";
+          }
+        }
+        function showPosition(position) {
+          x.innerHTML =
+            "Latitude: " +
+            position.coords.latitude +
+            "<br>Longitude: " +
+            position.coords.longitude;
+        }
+      </script>
+    </div>
+  </body>
+</html>
