@@ -6,14 +6,37 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link href="https://amitbaraiya.github.io/frontend/code.svg" rel="shortcut icon" type="image" />
     <title>Geolocation API</title>
+
+    <style>
+        * {
+            margin: 2px;
+            padding: 0;
+        }
+        #map {
+            height: 500px;
+            width: 500px;
+        }
+
+        #output {
+            margin-bottom: 20px;
+        }
+
+        .btn {
+            margin-bottom: 20px;
+        }
+
+        h1 {
+            margin-bottom: 20px;
+        }
+    </style>
   </head>
   <body>
     <h1>Hello, Let's trace your location</h1>
-    <button onClick="getLocation()">Get Location</button>
-    <div id="output">
+    <button class="btn"onClick="getLocation()">Get Location</button>
+    <div id="output"></div>
+    <div id="map"> </div>    
       <script>
         var x = document.getElementById("output");
-
         function getLocation() {
           if (navigator.geolocation) {
             navigator.geolocation.getCurrentPosition(showPosition);
@@ -27,8 +50,28 @@
             position.coords.latitude +
             "<br>Longitude: " +
             position.coords.longitude;
+        } 
+
+        function initMap(){
+            var location = {lat: 23.003515, lng: 72.513454};
+            var map = new google.maps.Map(document.getElementById("map"),{
+                zoom: 4,
+                center: location
+            });
+            var marker = new google.maps.Marker({
+                position: location,
+                map:map
+            });
         }
       </script>
+      <!-- <script async defer 
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCgHkgRsN0ETpyuqD4Oe6iWgK7PQnJnQFA&callback=initMap">
+    </script> -->
+
+    <script
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCgHkgRsN0ETpyuqD4Oe6iWgK7PQnJnQFA&callback=initMap&libraries=&v=weekly"
+    async
+  ></script>
     </div>
   </body>
 </html>
