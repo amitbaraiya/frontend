@@ -1,0 +1,12 @@
+circle { 
+    fill: blue; 
+    animation: pulse 2s alternate infinite; 
+}
+@keyframes pulse {
+    100% {
+        r: 40;
+    }
+}
+body {
+    background-color: black;
+}
