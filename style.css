@@ -96,6 +96,7 @@ u {
 	flex-direction: row;
 	width: 900px;
 	justify-content: space-evenly;
+	margin-bottom: 20px;
 }
 
 @media screen and (max-width: 900px) {
