@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Dashboard</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <div class="main-container">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-sm-1">
+            <div class="left-main-container">
+              <dl class="row">
+                <dt>
+                  <a href="#" class="logo"
+                    ><sub>
+                      <img src="./images/Ellipse 1.svg" alt="" />
+                    </sub>
+
+                    <img src="./images/Path 1.svg" alt="" />
+                    <sub> <img src="./images/Ellipse 1.svg" alt="" /> </sub
+                  ></a>
+                </dt>
+                <dd>
+                  <img
+                    src="./images/menu.png"
+                    class="menu-icon"
+                    onclick="toggleBtn()"
+                  />
+                </dd>
+              </dl>
+              <ul id="MenuItems">
+                <li>
+                  <img src="./images/dashboard-active.svg" />
+                </li>
+                <li>
+                  <img src="./images/graph.svg" />
+                </li>
+                <li>
+                  <img src="./images/appointments.svg" />
+                </li>
+                <li>
+                  <img src="./images/enquiries.svg" />
+                </li>
+                <li>
+                  <img src="./images/messages.svg" />
+                </li>
+                <li>
+                  <img src="./images/users.svg" />
+                </li>
+                <li>
+                  <img src="./images/settings.svg" />
+                </li>
+              </ul>
+              <a href="#" class="footer-left">
+                <img src="./images/logout.svg" />
+              </a>
+            </div>
+          </div>
+          <div class="col-sm-8 middle-main-container">
+            <div class="first-middle-container">
+              <div class="one-middle-container"><h1>Dashboard</h1></div>
+              <div class="two-middle-container">
+                <button type="button" class="btn">Customise blocks</button>
+              </div>
+            </div>
+            <div class="two-middle-container">
+              <h6>Welcome Back!</h6>
+            </div>
+
+            <div class="three-middle-container">
+              <h6>Quick stats</h6>
+            </div>
+            <div class="row row-content">
+              <div class="four-middle-container">
+                <div class="col-md-3">
+                  <div class="inner-1-middle">
+                    <div class="inner-2-middle">
+                      <dl class="row details">
+                        <dt>
+                          <h6 class="text1">Total bookings</h6>
+                        </dt>
+                        <dt>
+                          <h6 class="text2">28,345</h6>
+                        </dt>
+                      </dl>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-3 four">
+                  <div class="inner-1-middle">
+                    <div class="inner-2-middle">
+                      <dl class="row details">
+                        <dt>
+                          <h6 class="text1">Pending Approval</h6>
+                        </dt>
+                        <dt>
+                          <h6 class="text2 two">120</h6>
+                        </dt>
+                      </dl>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-3 four">
+                  <div class="inner-1-middle">
+                    <div class="inner-2-middle">
+                      <dl class="row details">
+                        <dt>
+                          <h6 class="text1">New Clients this month</h6>
+                        </dt>
+                        <dt>
+                          <h6 class="text2">
+                            89 <img src="./images/increase.svg" alt="" />
+                          </h6>
+                        </dt>
+                      </dl>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-3 four">
+                  <div class="inner-1-middle">
+                    <div class="inner-2-middle">
+                      <dl class="row details">
+                        <dt>
+                          <h6 class="text1">Returning Clients</h6>
+                        </dt>
+                        <dt>
+                          <h6 class="text2">
+                            46% <img src="./images/decrease.svg" alt="" />
+                          </h6>
+                        </dt>
+                      </dl>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row row-content">
+              <div class="fifth-middle-container">
+                <nav>
+                  <ul class="nav nav-tabs">
+                    <li class="nav-item">
+                      <a href="#" class="first-item">Bookings</a>
+                    </li>
+                    <li class="nav-item">
+                      <a href="#" class="two-text">Enquiries</a>
+                    </li>
+                    <li class="nav-item">
+                      <a href="#" class="three-text">My Services</a>
+                    </li>
+                  </ul>
+                </nav>
+              </div>
+              <div class="tab-content">
+                <!-- <div
+                  role="tabpanel"
+                  class="tab-pane fade show active"
+                  id="#one"
+                > -->
+                <div class="row row-content">
+                  <div class="col-sm-4">
+                    <div class="card">
+                      <div class="first-card-container">
+                        <h5 class="card-text-1">Amanda Chavez</h5>
+                        <h5 class="card-text-2">Service</h5>
+                        <h5 class="card-text-3">Physiotherapy</h5>
+                        <div class="card-inner-1">
+                          <div class="date">
+                            <h5 class="card-text-5">Date</h5>
+                            <h5 class="card-text-6">25 Jul 2020</h5>
+                          </div>
+                          <div class="time">
+                            <h5 class="card-text-7">Time</h5>
+                            <h5 class="card-text-8">11:00 - 12:00</h5>
+                          </div>
+                        </div>
+                        <hr style="margin-top: 20px; margin-bottom: 0; "/>
+                        <div class="card-inner-2">
+                          <div><h5 class="card-text-9">Accept Booking</h5></div>
+                          <div>
+                            <h5 class="card-text-10"></h5>
+                            Decline
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-sm-4">
+                    <div class="card">
+                      <div class="first-card-container">
+                        <h5 class="card-text-1">Fionna Wade</h5>
+                        <h5 class="card-text-2">Service</h5>
+                        <h5 class="card-text-3">Physiotherapy</h5>
+                        <div class="card-inner-1">
+                          <div class="date">
+                            <h5 class="card-text-5">Date</h5>
+                            <h5 class="card-text-6">25 Jul 2020</h5>
+                          </div>
+                          <div class="time">
+                            <h5 class="card-text-7">Time</h5>
+                            <h5 class="card-text-8">11:00 - 12:00</h5>
+                          </div>
+                        </div>
+                        <hr style="margin-top: 20px; margin-bottom: 0; "/>
+                        <div class="card-inner-2">
+                          <div><h5 class="card-text-9">Accept Booking</h5></div>
+                          <div>
+                            <h5 class="card-text-10"></h5>
+                            Decline
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-sm-4">
+                    <div class="card">
+                      <div class="first-card-container">
+                        <h5 class="card-text-1">Beatrice Carrol</h5>
+                        <h5 class="card-text-2">Service</h5>
+                        <h5 class="card-text-3">Physiotherapy</h5>
+                        <div class="card-inner-1">
+                          <div class="date">
+                            <h5 class="card-text-5">Date</h5>
+                            <h5 class="card-text-6">25 Jul 2020</h5>
+                          </div>
+                          <div class="time">
+                            <h5 class="card-text-7">Time</h5>
+                            <h5 class="card-text-8">11:00 - 12:00</h5>
+                          </div>
+                        </div>
+                        <hr style="margin-top: 20px; margin-bottom: 0; "/>
+                        <div class="card-inner-2">
+                          <div><h5 class="card-text-9">Accept Booking</h5></div>
+                          <div>
+                            <h5 class="card-text-10"></h5>
+                            Decline
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-sm-4">
+                    <div class="card">
+                      <div class="first-card-container">
+                        <h5 class="card-text-1">Jasmine Palmer</h5>
+                        <h5 class="card-text-2">Service</h5>
+                        <h5 class="card-text-3">Physiotherapy</h5>
+                        <div class="card-inner-1">
+                          <div class="date">
+                            <h5 class="card-text-5">Date</h5>
+                            <h5 class="card-text-6">25 Jul 2020</h5>
+                          </div>
+                          <div class="time">
+                            <h5 class="card-text-7">Time</h5>
+                            <h5 class="card-text-8">11:00 - 12:00</h5>
+                          </div>
+                        </div>
+                        <hr style="margin-top: 20px; margin-bottom: 0; "/>
+                        <div class="card-inner-2">
+                          <div><h5 class="card-text-9">Accept Booking</h5></div>
+                          <div>
+                            <h5 class="card-text-10"></h5>
+                            Decline
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-sm-4">
+                    <div class="card">
+                      <div class="first-card-container">
+                        <h5 class="card-text-1">Randy Elliot</h5>
+                        <h5 class="card-text-2">Service</h5>
+                        <h5 class="card-text-3">Physiotherapy</h5>
+                        <div class="card-inner-1">
+                          <div class="date">
+                            <h5 class="card-text-5">Date</h5>
+                            <h5 class="card-text-6">25 Jul 2020</h5>
+                          </div>
+                          <div class="time">
+                            <h5 class="card-text-7">Time</h5>
+                            <h5 class="card-text-8">11:00 - 12:00</h5>
+                          </div>
+                        </div>
+                        <hr style="margin-top: 20px; margin-bottom: 0; "/>
+                        <div class="card-inner-2">
+                          <div><h5 class="card-text-9">Accept Booking</h5></div>
+                          <div>
+                            <h5 class="card-text-10"></h5>
+                            Decline
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-sm-4">
+                    <div class="card">
+                      <div class="first-card-container">
+                        <h5 class="card-text-1">Christine Powell</h5>
+                        <h5 class="card-text-2">Service</h5>
+                        <h5 class="card-text-3">Physiotherapy</h5>
+                        <div class="card-inner-1">
+                          <div class="date">
+                            <h5 class="card-text-5">Date</h5>
+                            <h5 class="card-text-6">25 Jul 2020</h5>
+                          </div>
+                          <div class="time">
+                            <h5 class="card-text-7">Time</h5>
+                            <h5 class="card-text-8">11:00 - 12:00</h5>
+                          </div>
+                        </div>
+                        <hr style="margin-top: 20px; margin-bottom: 0; "/>
+                        <div class="card-inner-2">
+                          <div><h5 class="card-text-9">Accept Booking</h5></div>
+                          <div>
+                            <h5 class="card-text-10"></h5>
+                            Decline
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                </div>
+                <!-- </div> -->
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-3">
+            <div class="search-container">
+              <div class="search-logo">
+                <button>
+                  <i class="fas fa-search search-icon"></i> | Search Keyword
+                </button>
+              </div>
+              <div class="search-1">
+                <button><i class="far fa-bell"></i></button>
+              </div>
+            </div>
+            <div class="right-deatils-container">
+              <div class="left-deatils-container">
+                <div class="first-deatils"><h5>Hello,</h5></div>
+                <div class="second-deatils"><h5>Jonathan!</h5></div>
+                <div class="third-deatils">
+                  <h5>
+                    Copy your bio link and paste it in your profile to let people
+                    find you.
+                  </h5>
+                </div>
+              </div>
+              <div class="right-logo">
+                <img src="./images/user.svg" alt="user" />
+              </div>
+            </div>
+            <div class="copy-edit-main">
+              <div class="copy-edit-left">
+                <button>
+                  scheddo.com/jonathan | <i class="far fa-clone"></i>
+                </button>
+              </div>
+              <div class="copy-edit-right">
+                <button>Edit Link</button>
+              </div>
+            </div>
+            <div class="upgread-gread">
+              <div class="upgread-gread-left">
+                <h4>Upgrade to PRO</h4>
+                <p>For more Profile Control</p>
+              </div>
+              <div class="upgread-gread-righ">
+                <div class="upgread-gread-1">
+                  <img src="./images/upgrade.svg" alt="">
+                </div>
+              </div>
+            </div>
+            <div class="reminder-main">
+              <div class="reminder-left">
+                <strong>Reminders</strong>
+              </div>
+              <div class="reminder-right">
+                <button>View All &gt;</button>
+              </div>
+            </div>
+            <div class="booking-reminder-main">
+              <div class="booking-left">
+                <i class="fas fa-exclamation"></i>
+              </div>
+              <div class="booking-right">
+                <strong> Booking Reminder </strong>
+                <h6>Lorem ipsum dolor sit amet</h6>
+              </div>
+            </div>
+            <div class="booking-reminder-main">
+              <div class="newmessage-left">
+                <i class="far fa-envelope"></i>
+              </div>
+              <div class="booking-right">
+                <strong> New Message </strong>
+                <h6>Lorem ipsum dolor sit amet</h6>
+              </div>
+            </div>
+            <div class="booking-reminder-main">
+              <div class="booking-left">
+                <i class="fas fa-exclamation"></i>
+              </div>
+              <div class="booking-right">
+                <strong> Upcoming Booking </strong>
+                <h6>Lorem ipsum dolor sit amet</h6>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script>
+      var MenuItems = document.getElementById("MenuItems");
+
+      MenuItems.style.maxHeight = "0px";
+
+      function toggleBtn() {
+        if (MenuItems.style.maxHeight == "0px") {
+          MenuItems.style.maxHeight = "200px";
+        } else {
+          MenuItems.style.maxHeight = "0px";
+        }
+      }
+    </script>
+  </body>
+</html>

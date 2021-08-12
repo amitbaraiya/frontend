@@ -7,3 +7,15 @@ data_table = [
 	{dir:"scss_tutorial", topic:"SCSS Tutorail", skill:"SCSS"},
 	{dir:"bootstrap_tutorial", topic:"Bootstrap Tutorail", skill:"Bootstrap"},
 ]
+
+seocnd_table = [
+	{dir: "CSS_Test", topic: "Css Test"},
+	{dir: "BootstrapTest", topic: "Bootstrap Test"},
+	{dir: "JavaScriptTest" , topic:"JavaScript Test"},
+	{
+		dir: "jQueryTest1", topic:"jQuery Test1"
+	},
+	{
+		dir: "jQueryTest2", topic:"jQuery Test2"
+	},
+]

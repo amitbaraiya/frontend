@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Slider</title>
+    <link rel="stylesheet" href="./style.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src = "https://cdn.boomcdn.com/libs/owl-carousel/2.3.4/owl.carousel.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.boomcdn.com/libs/owl-carousel/2.3.4/assets/owl.carousel.min.css">
+</head>
+<body>
+    <div class="wrapper">
+        <div class="crousel owl-carousel">
+            <div class="card card-1">A</div>
+            <div class="card card-2">B</div>
+            <div class="card card-3">C</div>
+            <div class="card card-4">D</div>
+            <div class="card card-5">E</div>
+        </div>
+    </div>
+
+    <script>
+        $(".crousel").owlCarousel({
+            margin:10,
+            loop: true,
+            autoplay: true,
+            autoPlayTimeout: 2000,//2000 ms = 2 second
+            autoplayHoverpause:true,
+
+            responsive: {
+                0: {
+                    items: 1,
+                    nav: false
+                },
+                600: {
+                    item: 2,
+                    nav: false
+                },
+                1000: {
+                    items: 3,
+                    nav: false
+                }
+            }
+        });
+    </script>
+</body>
+</html>
