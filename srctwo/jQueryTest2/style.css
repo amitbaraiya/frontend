@@ -1,0 +1,51 @@
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css");
+@import url("https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.css");
+
+.ulist {
+  list-style: none;
+  padding-left: 10px;
+  margin: 0;
+}
+.none {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.space {
+  padding-right: 10px;
+}
+
+a {
+  text-decoration: none;
+  padding-left: 15px;
+  color: black;
+}
+
+summary {
+  display: block;
+  position: relative;
+  cursor: pointer;
+  padding: 5px 0px 5px 15px;
+}
+
+summary:before {
+  font-family: "ionicons";
+  content: "\f125";
+  position: absolute;
+  margin-left: -15px;
+  transform: rotate(0);
+  transform-origin: 0.2rem 50%;
+  transition: 0.25s transform ease;
+}
+
+details[open] > summary:before {
+  transform: rotate(90deg);
+}
+
+details > summary::-webkit-details-marker {
+  display: none;
+}
+
+details, summary {
+  outline: none;
+}
