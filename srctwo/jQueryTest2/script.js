@@ -1,9 +1,28 @@
+function generateDataTree(data, visited, parent=0) {
+  let ans=[];
+  for(let i=0; i<data.length; i++) {
+    if(visited[i] || data[i].pid!=parent) continue;
+    visited[i] = true;
+    let tmp = {};
+    tmp["id"] = [data[i].name, data[i].icon];
+    let sub = generateDataTree(data, visited, data[i].id);
+    if(sub) tmp["sub"] = sub;
+    ans.push(tmp);
+  }
+  if(ans.length==0) return null;
+  return ans;
+}
+
 $(document).ready(function () {
-  $.getJSON("menu.json", function (data) {
+  $.get("menu.txt", function (data) {
+    let visited = [];
+    for(let i=0; i<data.length; i++) visited.push(false);
+    data = generateDataTree(JSON.parse(data),visited);
+    console.log(data);
     output = `<ul class="none">`;
 
     for (let i in data) {
-      output += `<li>`;
+      output += `<li class="listSpace">`;
       output += dataToHTML(data[i]);
       output += `</li>`;
     }
@@ -25,7 +44,7 @@ function dataToHTML(data) {
     output = `<details>`;
     output += `<summary><i class="${data.id[1]} space" aria-hidden="true"></i>${data.id[0]}</summary><ul class="ulist">`;
     for (let i in data.sub) {
-      output += `<li>`;
+      output += `<li class="listSpace">`;
       output += dataToHTML(data.sub[i]);
       output += `</li>`;
     }
