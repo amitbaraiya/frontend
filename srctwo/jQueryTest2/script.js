@@ -14,11 +14,12 @@ function generateDataTree(data, visited, parent=0) {
 }
 
 $(document).ready(function () {
-  $.get("menu.txt", function (data) {
+  $.getJSON("menu.json", function (data) {
+    console.log("Linear:", data);
     let visited = [];
     for(let i=0; i<data.length; i++) visited.push(false);
-    data = generateDataTree(JSON.parse(data),visited);
-    console.log(data);
+    data = generateDataTree(data,visited);
+    console.log("Nested:",data);
     output = `<ul class="none">`;
 
     for (let i in data) {
