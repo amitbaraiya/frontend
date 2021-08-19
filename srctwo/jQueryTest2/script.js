@@ -1,24 +1,12 @@
-function generateDataTree(data, visited, parent=0) {
-  let ans=[];
-  for(let i=0; i<data.length; i++) {
-    if(visited[i] || data[i].pid!=parent) continue;
-    visited[i] = true;
-    let tmp = {};
-    tmp["id"] = [data[i].name, data[i].icon];
-    let sub = generateDataTree(data, visited, data[i].id);
-    if(sub) tmp["sub"] = sub;
-    ans.push(tmp);
-  }
-  if(ans.length==0) return null;
-  return ans;
-}
-
 $(document).ready(function () {
-  $.getJSON("menu.json", function (data) {
-    console.log("Linear:", data);
+  $.get("menu.json", function (data) {
+    // console.log("Linear:", JSON.stringify(data));
+    // debugger;
+    console.log("Linear:",data);
     let visited = [];
     for(let i=0; i<data.length; i++) visited.push(false);
     data = generateDataTree(data,visited);
+    // console.log("Nested:",JSON.stringify(data));
     console.log("Nested:",data);
     output = `<ul class="none">`;
 
@@ -32,6 +20,21 @@ $(document).ready(function () {
     $("#Menu").html(output);
   });
 });
+
+function generateDataTree(data, visited, parent=0) {
+  let ans=[];
+  for(let i=0; i<data.length; i++) {
+    if(visited[i] || data[i].pid!=parent) continue;
+    visited[i] = true;
+    let tmp = {};
+    tmp.id = [data[i].name, data[i].icon];
+    let sub = generateDataTree(data, visited, data[i].id);
+    if(sub) tmp.sub = sub;
+    ans.push(tmp);
+  }
+  if(ans.length==0) return null;
+  return ans;
+}
 
 /* $("summary").click(function () {
   window.location = $(this).find("a").attr("href");
